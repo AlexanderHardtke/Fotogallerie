@@ -1,0 +1,249 @@
+@font-face {
+    font-family: Roboto;
+    src: url(./font/Roboto/Roboto-Regular.ttf);
+}
+
+body {
+    font-family: Roboto;
+    margin: 0;
+    color: darkgray;
+}
+
+h1 {
+    font-size: 32px;
+    text-align: center;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 83px;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.burger {
+    margin-top: -30px;
+    margin-left: 3px;
+}
+
+#checkbox {
+    opacity: 0;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin-bottom: 3px;
+    background: black;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+.burgerMenu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    height: 150px;
+    font-size: 24px;
+    left: 0;
+    right: 0;
+    top: 58px;
+    z-index: 3;
+    transform: translateY(-400px);
+    background-color: white;
+    transition: all 225ms ease-in-out;
+}
+
+.show-burgerMenu {
+    transform: translateX(0);
+}
+
+a {
+    text-decoration: none;
+    color: darkgray;
+}
+
+a:hover {
+    filter: drop-shadow(0px 4px 3px rgb(95, 95, 95));
+}
+
+.headerIcon {
+    height: 40px;
+    margin-left: 4px;
+}
+
+.seperator {
+    height: 2px;
+    background-color: black;
+    width: 100%;
+    filter: drop-shadow(0px 2px 2px rgb(80, 80, 80));
+}
+
+.image {
+    cursor: pointer;
+    height: 200px;
+    max-width: 450px;
+    min-width: 200px;
+    margin: 10px;
+    z-index: 0;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.image:hover {
+    box-shadow: 8px 5px 2px black;
+}
+
+.imageContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 90px;
+}
+
+.centerPhoto {
+    max-height: 79%;
+    max-width: 83%;
+    z-index: 2;
+    transition: all 0.25s ease-in-out;
+    transform: scale(1);
+}
+
+.transitionImg {
+    transform: scale(0.4);
+}
+
+.transRight {
+    transform: scale(1) translate(100%);
+}
+
+.transLeft {
+    transform: scale(1) translate(-100%);
+}
+
+.icons {
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrow {
+    height: 36px;
+    margin: 10px;
+}
+
+.arrow:hover {
+    scale: 1.2;
+}
+
+.escButton {
+    position: absolute;
+    height: 44px;
+    right: 5%;
+    top: 5%;
+}
+
+.escButton:hover {
+    scale: 1.2;
+}
+
+.overlay {
+    z-index: 1;
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.showOverlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dNone {
+    display: none;
+}
+
+main {
+    position: relative;
+    min-height: 80vh;
+}
+
+footer {
+    position: relative;
+    background-color: #808080;
+    height: 10vh;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    filter: drop-shadow(0px 4px 3px white);
+}
+
+.infoBox {
+    padding: 8px;
+    margin: 80px 5vw 30px 5vw;
+}
+
+@media (max-width: 775px) {
+    .image {
+        max-width: 200px;
+        margin: 5px;
+    }
+
+    .burgerMenu {
+        flex-direction: column;
+    }
+
+    .arrow {
+        height: 28px;
+    }
+
+    .showOverlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .escButton {
+        position: absolute;
+        height: 32px;
+        right: 7%;
+        top: 7%;
+    }
+
+    .icons {
+        position: fixed;
+        bottom: 5%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin: 8px;
+    }
+}
